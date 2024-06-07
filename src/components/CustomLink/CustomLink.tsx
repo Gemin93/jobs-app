@@ -1,6 +1,4 @@
 import { Button } from "@chakra-ui/react";
-import { color } from "framer-motion";
-import { link } from "fs";
 import Link from "next/link";
 import { ReactNode } from "react";
 
@@ -41,7 +39,7 @@ export const CustomLink = ({
 }: CustomLinkProps) => {
   return (
     <Link shallow={shallow} href={href} passHref>
-      <Button leftIcon={icon} as="a" {...variants[variant]}>
+      <Button leftIcon={icon} {...variants[variant]}>
         {children}
       </Button>
     </Link>
