@@ -60,7 +60,9 @@ export const DataTable = <Entry extends Entity>({
               >
                 {columns.map(({ field, title, render }, columnIndex) => (
                   <Td key={title + columnIndex}>
-                    <Text>{render ? render({ entry }) : `entry[field]`}</Text>
+                    <Text>
+                      {render ? render({ entry }) : `${entry[field]}`}
+                    </Text>
                   </Td>
                 ))}
               </Tr>

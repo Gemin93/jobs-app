@@ -1,18 +1,21 @@
 "use client";
-import { Button } from "@/components/Button/Button";
+import { Center, Heading, Text, VStack } from "@chakra-ui/react";
 import { CustomLink } from "@/components/CustomLink/CustomLink";
-import { InputField } from "@/components/InputField/InputField";
 
 const LandingPage = () => {
   return (
     <>
-      <Button variant="solid" type="button">
-        Click me
-      </Button>
-      <br />
-      <InputField label="Name"></InputField>
-      <br />
-      <CustomLink href="/">Home</CustomLink>
+      <Center flexDirection="column" h="full">
+        <VStack maxW="3x1" spacing="8">
+          <Heading size="3x1">Jobs App</Heading>
+          <Text fontSize={{ base: "lg", md: "xl" }} maxW="2x1" color="muted">
+            Manage your careers pages
+          </Text>
+          <CustomLink href={"/dashboerds/jobs"} variant="solid">
+            Get Started
+          </CustomLink>
+        </VStack>
+      </Center>
     </>
   );
 };
