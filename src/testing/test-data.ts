@@ -138,7 +138,7 @@ export const getJobs = delayFn(
 );
 
 export const getJob = delayFn(
-  (id: string) => testData.jobs.find((j) => j.id === id),
+  (id: string) => testData.jobs.find((j) => j.id === id) || null,
   300
 );
 
