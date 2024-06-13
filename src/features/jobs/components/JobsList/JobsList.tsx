@@ -11,7 +11,7 @@ type JobListType = "dashboard" | "public";
 export type JobsListProps = {
   type: JobListType;
   jobs: Job[];
-  isLoading: boolean;
+  isLoading?: boolean;
   organizationId: string;
 };
 
@@ -37,7 +37,7 @@ const getTableColumns = (organizationId: string, type: JobListType) => {
           <CustomLink
             href={
               type === "public"
-                ? `/organisations/${organizationId}/jobs/${id}`
+                ? `/organizations/${organizationId}/jobs/${id}`
                 : `/dashboard/jobs/${id}`
             }
           >

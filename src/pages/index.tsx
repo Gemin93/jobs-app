@@ -1,10 +1,11 @@
-"use client";
 import { Center, Heading, Text, VStack } from "@chakra-ui/react";
 import { CustomLink } from "@/components/CustomLink/CustomLink";
+import { Seo } from "@/components/Seo/Seo";
 
 const LandingPage = () => {
   return (
     <>
+      <Seo title="Jobs App" />
       <Center flexDirection="column" h="full">
         <VStack maxW="3x1" spacing="8">
           <Heading size="3x1">Jobs App</Heading>
