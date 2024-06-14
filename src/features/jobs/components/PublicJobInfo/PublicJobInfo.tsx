@@ -10,7 +10,7 @@ export const PublicJobInfo = ({ job }: { job: Job }) => {
   return (
     <>
       <VStack pt="16" pb="4" spacing="8">
-        <Heading size="2x1">{job?.position}</Heading>
+        <Heading size="2xl">{job?.position}</Heading>
         <HStack spacing="12">
           <Text>{job?.department}</Text>
           <Text>{job?.location}</Text>
